@@ -1,16 +1,15 @@
-# test
+# Books Copyright Management Mobile App (Flutter)
 
-A new Flutter project.
+A Flutter project, that handles copyright management of texts. 
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+1) SignUp/Login
+2) A SuperAdmin (Who can approve User Logins)
+3) View and Read Books
+4) Edit and Save Own Versions
+5) View and Read own versions
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Developed by @harrisbasra
