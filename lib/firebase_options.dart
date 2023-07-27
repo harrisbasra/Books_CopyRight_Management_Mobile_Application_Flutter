@@ -45,29 +45,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCktawp7X4zUE9K52yCDBSrqZLN5wf2FKU',
-    appId: '1:603248941877:web:088fef0e907dd165088a7c',
+    apiKey: 'AIzaSyBfC9y2P53Og7sMEqBXzY_NGKTB8Mbf5l0',
+    appId: '1:533435175027:android:f1b310a6f73ce777ba5a06',
     messagingSenderId: '603248941877',
-    projectId: 'netikash-live',
-    authDomain: 'netikash-live.firebaseapp.com',
-    storageBucket: 'netikash-live.appspot.com',
+    projectId: 'jijoko-57f55',
+    authDomain: 'jijoko-57f55.firebaseapp.com',
+    storageBucket: 'jijoko-57f55.appspot.com',
     measurementId: 'G-NLTNJPKT3S',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyChSUzO6PZNgCsCcO_L3247vReOADB_jwE',
-    appId: '1:603248941877:android:3e89ac763243f200088a7c',
+     apiKey: 'AIzaSyBfC9y2P53Og7sMEqBXzY_NGKTB8Mbf5l0',
+    appId: '1:533435175027:android:f1b310a6f73ce777ba5a06',
     messagingSenderId: '603248941877',
-    projectId: 'netikash-live',
-    storageBucket: 'netikash-live.appspot.com',
+    projectId: 'jijoko-57f55',
+    storageBucket: 'jijoko-57f55.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBy9jRR4kF6gn4dLgxHXc2IS-6bvxCqEFg',
-    appId: '1:603248941877:ios:729fa8a9f749a006088a7c',
+    apiKey: 'AIzaSyBfC9y2P53Og7sMEqBXzY_NGKTB8Mbf5l0',
+    appId: '1:533435175027:android:f1b310a6f73ce777ba5a06',
     messagingSenderId: '603248941877',
-    projectId: 'netikash-live',
-    storageBucket: 'netikash-live.appspot.com',
+    projectId: 'jijoko-57f55',
+    storageBucket: 'jijoko-57f55.appspot.com',
     iosClientId: '603248941877-kna3fsu407ta54cqgh0baho11n6dntgb.apps.googleusercontent.com',
     iosBundleId: 'com.example.test',
   );

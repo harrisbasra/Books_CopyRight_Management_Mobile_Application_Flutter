@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:test/pages/main_home_page05.dart';
-import 'package:test/pages/splash_screen00.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'dart:io';
 import 'dart:convert';
 import 'dart:async';
-import 'package:path_provider/path_provider.dart';
+
+import 'main_enterance.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: main_enterance(),
       // home: CartPage(),
     );
   }

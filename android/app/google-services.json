@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "603248941877",
-    "project_id": "netikash-live",
-    "storage_bucket": "netikash-live.appspot.com"
+    "project_number": "533435175027",
+    "project_id": "jijoko-57f55",
+    "storage_bucket": "jijoko-57f55.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:603248941877:android:3e89ac763243f200088a7c",
+        "mobilesdk_app_id": "1:533435175027:android:f1b310a6f73ce777ba5a06",
         "android_client_info": {
-          "package_name": "com.example.test"
+          "package_name": "com.example.mybooks"
         }
       },
       "oauth_client": [
         {
-          "client_id": "603248941877-8rfj8vjgu2c5t2vonn59rt5usmnb89qh.apps.googleusercontent.com",
+          "client_id": "533435175027-tklu73g1hkhkvqma0atk0tk971u55n9m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyChSUzO6PZNgCsCcO_L3247vReOADB_jwE"
+          "current_key": "AIzaSyBfC9y2P53Og7sMEqBXzY_NGKTB8Mbf5l0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "603248941877-8rfj8vjgu2c5t2vonn59rt5usmnb89qh.apps.googleusercontent.com",
+              "client_id": "533435175027-tklu73g1hkhkvqma0atk0tk971u55n9m.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
