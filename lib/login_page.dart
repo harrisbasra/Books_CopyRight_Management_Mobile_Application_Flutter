@@ -1,8 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:test/HomePage.dart';
 import 'package:test/sign_up.dart';
+
+import 'message.dart';
 
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -34,7 +37,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 100),
-              _buildTextField("Nutzername oder  Email", emailController),
+              _buildTextField("Email", emailController),
               SizedBox(height: 15),
               _buildTextField("Passwort", passwordController),
               SizedBox(height: 20),
@@ -59,7 +62,7 @@ class LoginPage extends StatelessWidget {
                   String E = "support@hypno-skript.com";
                   String P = "app#Jmm123!";
                   final password = passwordController.text.trim();
-                  bool loginSuccess = await signInWithEmailPassword(email, password);
+                  bool loginSuccess = await signInWithEmailPassword(email, password, context);
                   if(email.toString() == E){
                     if(password.toString() == P){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(isAdmin: true, username: 'Admin',)));
@@ -93,7 +96,45 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 80),
+              SizedBox(height: 15,),
+              InkWell(
+                onTap: () {
+    //                 recognizer: TapGestureRecognizer()..onTap = ( ) async {
+    // var ur I "https:
+    // if(await canLaunch(url)
+    // await launch(url);
+    // throw "Cannot load Uri" •
+    // 1
+                },
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      TextSpan( text: "Die ",
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.black, // You can change the color if needed
+                        ),),
+                      TextSpan( text: "Datenschutzerklärung",
+                        recognizer: TapGestureRecognizer()..onTap = () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => PrivacyPolicyPage()));
+                        },
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Color.fromRGBO(241, 59, 58, 1), // You can change the color if needed
+                        ),),
+                      TextSpan( text: " habe ich gelesen und bin damit einverstanden",
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.black, // You can change the color if needed
+                        ),),
+                    ],
+
+                ),
+    ),
+
+    ),
+              SizedBox(height: 70),
               InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
@@ -103,6 +144,7 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(fontSize: 12),
                 ),
               ),
+
             ],
           ),
         ),
@@ -128,7 +170,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Future<bool> signInWithEmailPassword(String email, String password) async {
+  Future<bool> signInWithEmailPassword(String email, String password, BuildContext context) async {
     try {
       // Initialize Firebase if it's not already initialized
       await Firebase.initializeApp();
@@ -151,7 +193,15 @@ class LoginPage extends StatelessWidget {
         // Password matches, authentication successful
         if(userData['valid']==true){
           username = userData['name'];
+
           return true;
+        }
+        else{
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text("Give us a moment we are reviewing your registration"),
+            ),
+          );
         }
         return false;
       } else {

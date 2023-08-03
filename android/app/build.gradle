@@ -43,7 +43,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.test"
+        applicationId "com.skript.hypno"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
@@ -52,6 +52,7 @@ android {
 
     buildTypes {
         release {
+            //
             signingConfig signingConfigs.debug
         }
     }

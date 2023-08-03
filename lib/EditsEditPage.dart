@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'HomePage.dart';
+
 bool Check = false;
 class EditsEditPage extends StatelessWidget {
   String text;
@@ -41,7 +43,9 @@ class EditsEditPage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 10.0),
                   child: TextField(
                     controller: controller,
-                    maxLines: null, // Allow multiple lines
+                    maxLines: null,
+                    enableInteractiveSelection: false,
+                    // Allow multiple lines
                     decoration: const InputDecoration(
                       border: InputBorder.none, // Hide default border inside the container
                       hintText: 'Enter your text here', // Placeholder text
@@ -75,7 +79,12 @@ class EditsEditPage extends StatelessWidget {
                 //   ),
                 // );
               }
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(username: USER, isAdmin: false), // Pass documentID to BookPage
+                ),
+              );
             },
             style: ElevatedButton.styleFrom(
               primary: Color.fromRGBO(241, 59, 58, 1),

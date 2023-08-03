@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:test/HomePage.dart';
 
 bool Check = false;
 class BookEditPage extends StatelessWidget {
@@ -33,7 +34,7 @@ class BookEditPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Colors.black,
-                    width: 2.0,
+                    width: 3.0,
                   ),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
@@ -41,6 +42,7 @@ class BookEditPage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 10.0),
                   child: TextField(
                     controller: controller,
+                    enableInteractiveSelection: false,
                     maxLines: null, // Allow multiple lines
                     decoration: const InputDecoration(
                       border: InputBorder.none, // Hide default border inside the container
@@ -75,7 +77,12 @@ class BookEditPage extends StatelessWidget {
                  //   ),
                  // );
                }
-               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(username: USER, isAdmin: false), // Pass documentID to BookPage
+                ),
+              );
             },
             style: ElevatedButton.styleFrom(
               primary: Color.fromRGBO(241, 59, 58, 1),

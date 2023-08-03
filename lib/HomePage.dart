@@ -51,17 +51,26 @@ class HomePage extends StatelessWidget {
               ),
 
 
-              SizedBox(height: 20),
-              TextFormField(
-                decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.search),
-                  hintText: 'Type book name here',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                  ),
+              // SizedBox(height: 20),
+              // TextFormField(
+              //   decoration: InputDecoration(
+              //     prefixIcon: Icon(Icons.search),
+              //     hintText: 'Type book name here',
+              //     border: OutlineInputBorder(
+              //       borderRadius: BorderRadius.circular(30.0),
+              //     ),
+              //   ),
+              // ),
+              SizedBox(height: 30),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  '---------------------------------------------',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 20,),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               Text(
                 '“Original Texte',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -96,25 +105,48 @@ class HomePage extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: Icon(Icons.settings),
+              icon: isAdmin ? Icon(Icons.settings) : Icon(Icons.delete),
               onPressed: () {
-                if(isAdmin==true){
+                if (isAdmin) {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => RequestsPage(), // Pass documentID to BookPage
                     ),
                   );
-                }
-                else{
+                } else {
+                  var query = FirebaseFirestore.instance.collection('users').where('name', isEqualTo: username);
+
+// Execute the query to find the document
+                  query.get().then((querySnapshot) {
+                    if (querySnapshot.docs.isEmpty) {
+                      // No document found with the given username
+                      print('User $username not found.');
+                    } else {
+                      // Get the document reference and delete it
+                      var document = querySnapshot.docs[0];
+                      document.reference.delete().then((value) {
+                        // Success: Document deleted
+                        print('User $username denied.');
+                      }).catchError((error) {
+                        // Error handling
+                        print('Error denying user $username: $error');
+                      });
+                    }
+                  }).catchError((error) {
+                    // Error handling for query
+                    print('Error querying for user $username: $error');
+                  });
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text("Only Admin Can Access This Feature"),
+                    const SnackBar(
+                      content: Text("ID Deleted"),
                     ),
                   );
+                  Navigator.pop(context);
                 }
               },
             ),
+
           ],
         ),
       ),
@@ -192,6 +224,9 @@ class ShowBook extends StatelessWidget {
                       SizedBox(height: 4),
                       Text(
                         authorName,
+                        overflow: TextOverflow.ellipsis,
+                        softWrap: true,
+                        maxLines: 1,
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.grey,
@@ -247,7 +282,7 @@ class ShowEdits extends StatelessWidget {
                 },
                 child: Container(
                   width: 100,
-                  height: 200,
+                  height: 250,
                   margin: EdgeInsets.all(8),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -279,6 +314,9 @@ class ShowEdits extends StatelessWidget {
                       SizedBox(height: 4),
                       Text(
                         authorName,
+                        overflow: TextOverflow.ellipsis,
+                        softWrap: true,
+                        maxLines: 1,
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.grey,

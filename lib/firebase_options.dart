@@ -64,12 +64,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBfC9y2P53Og7sMEqBXzY_NGKTB8Mbf5l0',
-    appId: '1:533435175027:android:f1b310a6f73ce777ba5a06',
+    appId: '1:533435175027:ios:f1b310a6f73ce777ba5a06',
     messagingSenderId: '603248941877',
     projectId: 'jijoko-57f55',
     storageBucket: 'jijoko-57f55.appspot.com',
     iosClientId: '603248941877-kna3fsu407ta54cqgh0baho11n6dntgb.apps.googleusercontent.com',
-    iosBundleId: 'com.example.test',
+    iosBundleId: 'com.skript.hypno',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -79,6 +79,6 @@ class DefaultFirebaseOptions {
     projectId: 'netikash-live',
     storageBucket: 'netikash-live.appspot.com',
     iosClientId: '603248941877-kna3fsu407ta54cqgh0baho11n6dntgb.apps.googleusercontent.com',
-    iosBundleId: 'com.example.test',
+    iosBundleId: 'com.skript.hypno',
   );
 }
