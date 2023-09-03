@@ -45,39 +45,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBfC9y2P53Og7sMEqBXzY_NGKTB8Mbf5l0',
-    appId: '1:533435175027:android:f1b310a6f73ce777ba5a06',
+    apiKey: 'AIzaSyDGEASfHYQtBPXgZEoYAwZKADQ3Xi-h1VI',
+    appId: '1:510718430786:android:efedc519d0c736c50e27db',
     messagingSenderId: '603248941877',
-    projectId: 'jijoko-57f55',
-    authDomain: 'jijoko-57f55.firebaseapp.com',
-    storageBucket: 'jijoko-57f55.appspot.com',
+    projectId: 'hypno-book-app',
+    storageBucket: 'hypno-book-app.appspot.com',
+    authDomain: 'hypno-book-app.firebaseapp.com',
     measurementId: 'G-NLTNJPKT3S',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-     apiKey: 'AIzaSyBfC9y2P53Og7sMEqBXzY_NGKTB8Mbf5l0',
-    appId: '1:533435175027:android:f1b310a6f73ce777ba5a06',
+     apiKey: 'AIzaSyDGEASfHYQtBPXgZEoYAwZKADQ3Xi-h1VI',
+    appId: '1:510718430786:android:efedc519d0c736c50e27db',
     messagingSenderId: '603248941877',
-    projectId: 'jijoko-57f55',
-    storageBucket: 'jijoko-57f55.appspot.com',
+    projectId: 'hypno-book-app',
+    storageBucket: 'hypno-book-app.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBfC9y2P53Og7sMEqBXzY_NGKTB8Mbf5l0',
-    appId: '1:533435175027:ios:f1b310a6f73ce777ba5a06',
+    apiKey: 'AIzaSyDGEASfHYQtBPXgZEoYAwZKADQ3Xi-h1VI',
+    appId: '1:510718430786:android:efedc519d0c736c50e27db',
     messagingSenderId: '603248941877',
-    projectId: 'jijoko-57f55',
-    storageBucket: 'jijoko-57f55.appspot.com',
+    projectId: 'hypno-book-app',
+    storageBucket: 'hypno-book-app.appspot.com',
     iosClientId: '603248941877-kna3fsu407ta54cqgh0baho11n6dntgb.apps.googleusercontent.com',
     iosBundleId: 'com.skript.hypno',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBy9jRR4kF6gn4dLgxHXc2IS-6bvxCqEFg',
-    appId: '1:603248941877:ios:729fa8a9f749a006088a7c',
+
+    apiKey: 'AIzaSyDGEASfHYQtBPXgZEoYAwZKADQ3Xi-h1VI',
+    appId: '1:510718430786:android:efedc519d0c736c50e27db',
     messagingSenderId: '603248941877',
-    projectId: 'netikash-live',
-    storageBucket: 'netikash-live.appspot.com',
+    projectId: 'hypno-book-app',
+    storageBucket: 'hypno-book-app.appspot.com',
     iosClientId: '603248941877-kna3fsu407ta54cqgh0baho11n6dntgb.apps.googleusercontent.com',
     iosBundleId: 'com.skript.hypno',
   );
